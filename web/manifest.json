@@ -1,6 +1,6 @@
 {
-    "name": "my_protfolio1",
-    "short_name": "my_protfolio1",
+    "name": "weatherapp_starter_project",
+    "short_name": "weatherapp_starter_project",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

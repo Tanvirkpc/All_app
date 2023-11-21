@@ -4,7 +4,9 @@ import 'package:my_protfolio1/Fragment/Skills.dart';
 import 'package:my_protfolio1/Fragment/Experiences.dart';
 import 'package:my_protfolio1/Fragment/About.dart';
 import 'package:my_protfolio1/Fragment/Education.dart';
-import 'package:my_protfolio1/Fragment/Contact.dart';
+import 'package:my_protfolio1/screens/home_screen.dart';
+import 'package:my_protfolio1/CalculatorScreen.dart';
+import 'package:my_protfolio1/quiz.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -119,72 +121,60 @@ class HomeActivity extends StatelessWidget {
                     ),
                   ),
                 ),
+
+
                 ListTile(
                   leading: Icon(Icons.person),
                   title: Text(
-                    'About_me',
+                    'Protfolio',
                     style: Theme.of(context).textTheme.subtitle2!.copyWith(color: Colors.white), // Set text color to white
                   ),
                   onTap: (){
                     Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => About())
+                        MaterialPageRoute(builder: (context) =>HomeActivity())
                     );
 
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.school_sharp),
+                  leading: Icon(Icons.quiz),
                   title: Text(
-                    'Education',
+                    'Quiz',
                     style: Theme.of(context).textTheme.subtitle2!.copyWith(color: Colors.white), // Set text color to white
                   ),
                   onTap: (){
                     Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Education())
+                        MaterialPageRoute(builder: (context) =>QuizScreen())
                     );
 
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.star),
+                  leading: Icon(Icons.calculate),
                   title: Text(
-                    'Skills',
+                    'Calculator',
                     style: Theme.of(context).textTheme.subtitle2!.copyWith(color: Colors.white), // Set text color to white
                   ),
                   onTap: (){
                     Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Skills())
+                        MaterialPageRoute(builder: (context) => CalculatorScreen())
                     );
 
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.work),
+                  leading: Icon(Icons.cloud),
                   title: Text(
-                    'Experiences',
+                    'Weather',
                     style: Theme.of(context).textTheme.subtitle2!.copyWith(color: Colors.white), // Set text color to white
                   ),
                   onTap: (){
                     Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Experiences())
-                    );
-
-                  },
-                ),
-                ListTile(
-                  leading: Icon(Icons.contact_phone),
-                  title: Text(
-                    'Contact',
-                    style: Theme.of(context).textTheme.subtitle2!.copyWith(color: Colors.white), // Set text color to white
-                  ),
-                  onTap: (){
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Contact())
+                        MaterialPageRoute(builder: (context) => HomeScreen())
                     );
 
                   },
@@ -202,6 +192,7 @@ class HomeActivity extends StatelessWidget {
             Skills(),
             Experiences(),
             Contact(),
+
           ],
         ),
       ),
